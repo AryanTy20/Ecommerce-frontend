@@ -1,0 +1,52 @@
+.newProduct {
+  margin: 2em 5em;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      flex: 1;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 10%;
+        background-color: var(--accent);
+      }
+    }
+    .category {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      span {
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin: 0.5em 0;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: "";
+          height: 2px;
+          width: 100%;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform var(--transition-time);
+          background-color: var(--accent);
+        }
+      }
+      span.active::after {
+        transform: scaleX(100%);
+      }
+    }
+  }
+}

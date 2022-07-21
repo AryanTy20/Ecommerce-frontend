@@ -1,0 +1,81 @@
+.Card {
+  margin: 2em 0;
+  width: fit-content;
+  position: relative;
+  border: solid green 1px;
+  text-align: center;
+  //   height: 15em;
+  //   width: 12em;
+
+  .poster {
+    position: relative;
+
+    p {
+      position: absolute;
+      top: 3%;
+      left: 3%;
+      color: white;
+      padding: 0 0.5em;
+      font-size: 1.5rem;
+      max-width: fit-content;
+
+      &.new {
+        background-color: var(--green);
+      }
+
+      &.outOfStock {
+        background-color: black;
+      }
+      &.sale {
+        background-color: var(--danger);
+      }
+    }
+
+    // height: 15em;
+    // width: 12em;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .card_hover {
+    position: absolute;
+    top: 67%;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    height: 5em;
+    width: 100%;
+    overflow: hidden;
+
+    li {
+      padding: 0.5em;
+      background-color: white;
+      margin: 0 0.5em;
+      border-radius: 50%;
+      height: 2.5em;
+      width: 2.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-time);
+
+      &:is(:hover) {
+        background-color: var(--danger);
+        color: white;
+      }
+
+      svg {
+        transition: all var(--transition-time);
+      }
+
+      &:is(:hover) svg {
+        transform: rotateZ(360deg);
+      }
+    }
+  }
+}

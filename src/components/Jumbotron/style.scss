@@ -1,0 +1,87 @@
+.jumbotrone {
+  margin: 1em 0;
+  min-height: 70vh;
+  height: 70%;
+  .container {
+    // display: flex;
+    // align-items: center;
+
+    --gap: 1rem;
+    --num-cols: 4;
+    --row-height: 300px;
+    display: grid;
+
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+    .card {
+      position: relative;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .meta {
+        position: absolute;
+        top: 50%;
+        width: 90%;
+        margin-left: 5%;
+        transform: translateY(-50%);
+
+        h3 {
+          font-weight: bolder;
+        }
+
+        p {
+          color: var(--gray-dark);
+          font-weight: 100;
+
+          &:first-of-type {
+            font-size: 1.4rem;
+          }
+        }
+
+        button {
+          margin: 0.5em 0;
+          outline: 0;
+          border: 0;
+          background-color: transparent;
+          cursor: pointer;
+          font-size: 1.8rem;
+          font-weight: 400;
+          border-bottom: solid var(--accent) 2px;
+        }
+      }
+      &:first-child {
+        .meta {
+          width: 80%;
+          margin: 0 10em 0 5%;
+        }
+      }
+
+      &:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+
+        .meta {
+          h3 {
+            font-family: "fancyfont";
+            font-size: 5rem;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .jumbotrone {
+    .container {
+      --num-cols: 2;
+      --row-height: 200px;
+    }
+  }
+}
