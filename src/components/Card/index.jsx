@@ -4,12 +4,22 @@ import {
   BsArrowsAngleExpand as Expand,
   BsHeart as Heart,
   BsCartDash as Cart,
+  BsFillStarFill as Star,
+  BsStarHalf as HalfStar,
 } from "react-icons/bs";
-
 import "./style.scss";
 
 const Card = ({ src, title, rating, price, height, width }) => {
   const [Hover, setHover] = useState(false);
+
+  const getStar = (value) => {
+    const star = [];
+    const [whole, part] = parseFloat(value).toString().split(".");
+    for (let i = 0; i < whole; i++) star.push(Star);
+    if (part) star.push(HalfStar);
+
+    return star;
+  };
 
   return (
     <>
@@ -72,8 +82,15 @@ const Card = ({ src, title, rating, price, height, width }) => {
         </motion.ul>
         <div className="info">
           <p className="title">Lorem, ipsum.</p>
-          <span className="rating"></span>
-          <h4>Price</h4>
+          <span className="rating">
+            {getStar(rating).map((value) => (
+              <>
+                <Star />
+                <HalfStar />
+              </>
+            ))}
+          </span>
+          <h4>100 Rs</h4>
         </div>
       </div>
     </>

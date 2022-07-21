@@ -64,7 +64,7 @@ const NewProduct = () => {
           </div>
         </div>
         <div className="container">
-          <Card src={i1} />
+          <Card src={i1} rating={3.5} />
         </div>
       </div>
     </>
