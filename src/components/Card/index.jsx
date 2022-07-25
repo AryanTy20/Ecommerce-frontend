@@ -7,9 +7,18 @@ import {
   BsFillStarFill as Star,
   BsStarHalf as HalfStar,
 } from "react-icons/bs";
+import { FaStar, FaStarHalf } from "react-icons/fa";
 import "./style.scss";
 
-const Card = ({ src, title, rating, price, height, width }) => {
+const Card = ({
+  type = "portraits",
+  src,
+  title,
+  rating,
+  price,
+  height,
+  width,
+}) => {
   const [Hover, setHover] = useState(false);
 
   const getStar = (value) => {
@@ -24,17 +33,17 @@ const Card = ({ src, title, rating, price, height, width }) => {
   return (
     <>
       <div
-        className="Card"
+        className={type === "portrait" ? "portrait" : "landscape"}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
         <div className="poster">
-          <p className="new">New</p>
+          {type === "portrait" && <p className="new">New</p>}
           {/* <p className="outOfStock">out of stock</p>
           <p className="sale">Sale</p> */}
           <img src={src} />
         </div>
-        <motion.ul className="card_hover">
+        <ul className="card_hover">
           <motion.li
             initial={{
               translateY: 100,
@@ -79,16 +88,17 @@ const Card = ({ src, title, rating, price, height, width }) => {
           >
             <Cart className="cart" />
           </motion.li>
-        </motion.ul>
+        </ul>
         <div className="info">
           <p className="title">Lorem, ipsum.</p>
           <span className="rating">
-            {getStar(rating).map((value) => (
+            {/* {getStar(rating).map((value) => (
               <>
+            
                 <Star />
                 <HalfStar />
               </>
-            ))}
+            ))} */}
           </span>
           <h4>100 Rs</h4>
         </div>

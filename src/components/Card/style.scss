@@ -1,4 +1,4 @@
-.Card {
+.portrait {
   margin: 2em 0;
   width: fit-content;
   position: relative;
@@ -80,6 +80,87 @@
   }
 
   .info {
+    h4 {
+      margin: 0.5em 0;
+    }
+
+    .rating {
+      svg {
+        color: var(--yellow);
+      }
+    }
+  }
+}
+
+.landscape {
+  margin: 2em 0;
+  width: 20em;
+  position: relative;
+  border: solid green 1px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  .poster {
+    position: relative;
+    height: 7em;
+    width: 7em;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+
+  .card_hover {
+    position: absolute;
+    top: 64%;
+    left: 12%;
+    display: flex;
+    justify-content: center;
+    height: 5em;
+    width: 100%;
+    overflow: hidden;
+
+    li {
+      padding: 0.5em;
+      background-color: white;
+      margin: 0 0.5em;
+      border-radius: 50%;
+      height: 2em;
+      width: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-time);
+
+      &:is(:hover) {
+        background-color: var(--danger);
+        color: white;
+      }
+
+      svg {
+        transition: all var(--transition-time);
+      }
+
+      &:is(:hover) svg {
+        transform: rotateZ(360deg);
+      }
+    }
+  }
+
+  .info {
+    margin-left: 0.5em;
+    padding: 0 1em;
+    flex: 1;
+
+    .title {
+      font-weight: lighter;
+    }
+
     h4 {
       margin: 0.5em 0;
     }

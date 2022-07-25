@@ -1,0 +1,42 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1em;
+  gap: 2em;
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  .main {
+    max-width: 20em;
+    .pcards {
+      display: flex;
+      align-items: center;
+      margin: 0.5em 0;
+
+      p {
+        padding: 1em;
+        background-color: lightsalmon;
+        margin: 0.3em;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .newsLetter {
+    .social-cards {
+      display: flex;
+      align-items: center;
+      margin: 0.5em 0;
+
+      p {
+        padding: 1em;
+        background-color: lightsalmon;
+        margin: 0.3em;
+        border-radius: 50%;
+      }
+    }
+  }
+}
