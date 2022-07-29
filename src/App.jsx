@@ -7,6 +7,7 @@ import {
   Collection,
   DiscountFlex,
   Profile,
+  WhyUs,
   Footer,
 } from "./components";
 import "./App.scss";
@@ -17,7 +18,10 @@ function App() {
       <Navbar />
       <Jumbotron />
       <NewProduct />
-      {/* <Footer /> */}
+      <Collection />
+      <DiscountFlex />
+      <WhyUs />
+      <Footer />
     </>
   );
 }

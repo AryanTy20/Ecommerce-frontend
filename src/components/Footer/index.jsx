@@ -1,18 +1,37 @@
 import "./style.scss";
 
+import {
+  FaFacebookF as FB,
+  FaTwitter as Twitter,
+  FaInstagram as IG,
+  FaYoutube as Youtube,
+  FaPinterestP as PinInterest,
+} from "react-icons/fa";
+
+import { C1, C2, C3, C4, C5 } from "../../../asset";
+
 const Footer = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+    alert("hello");
+  };
+
   return (
     <>
       <div className="footer">
         <div className="main">
-          <h3>TyStore</h3>
+          <h3 className="logo">TyStore</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, a.</p>
           <div className="pcards">
-            <p className="card"></p>
-            <p className="card"></p>
-            <p className="card"></p>
-            <p className="card"></p>
-            <p className="card"></p>
+            <img src={C1} />
+
+            <img src={C2} />
+
+            <img src={C3} />
+
+            <img src={C4} />
+
+            <img src={C5} />
           </div>
         </div>
         <div className="quick-links">
@@ -34,20 +53,35 @@ const Footer = () => {
         </div>
         <div className="newsLetter">
           <h3>Newsletter</h3>
-          <form className="email-box">
+          <form className="email-box" onSubmit={submitHandler}>
             <div className="inputBox">
-              <input type="email" />
+              <input type="email" placeholder="Email" />
               <button>Subscribe</button>
             </div>
           </form>
           <div className="social-cards">
-            <p className="card"></p>
-            <p className="card"></p>
-            <p className="card"></p>
-            <p className="card"></p>
-            <p className="card"></p>
+            <p className="card">
+              <FB />
+            </p>
+            <p className="card">
+              <Twitter />
+            </p>
+            <p className="card">
+              <IG />
+            </p>
+            <p className="card">
+              <Youtube />
+            </p>
+            <p className="card">
+              <PinInterest />
+            </p>
           </div>
         </div>
+      </div>
+      <div className="createdby">
+        <p>
+          created by : <a href="http://github.com/AryanTy20">AryanTy</a>
+        </p>
       </div>
     </>
   );

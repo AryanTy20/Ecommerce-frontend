@@ -15,3 +15,15 @@ export { default as i5 } from "./items/i5.webp";
 export { default as i6 } from "./items/i6.webp";
 export { default as i7 } from "./items/i7.webp";
 export { default as i8 } from "./items/i8.webp";
+
+//Card
+
+export { default as C1 } from "./img/c1.png";
+export { default as C2 } from "./img/c2.webp";
+export { default as C3 } from "./img/c3.png";
+export { default as C4 } from "./img/c4.png";
+export { default as C5 } from "./img/c5.webp";
+
+//slider
+export { default as collection } from "./img/collection.webp";
+export { default as discount } from "./img/discount.webp";

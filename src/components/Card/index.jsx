@@ -11,7 +11,7 @@ import { FaStar, FaStarHalf } from "react-icons/fa";
 import "./style.scss";
 
 const Card = ({
-  type = "portraits",
+  type = "portrait",
   src,
   title,
   rating,
@@ -46,10 +46,10 @@ const Card = ({
         <ul className="card_hover">
           <motion.li
             initial={{
-              translateY: 100,
+              translateY: type == "portrait" ? 100 : 10,
             }}
             animate={{
-              translateY: Hover ? 0 : 100,
+              translateY: Hover ? (type == "portrait" ? 0 : 10) : 100,
               transition: {
                 duration: 0.1,
                 delay: 0.1,
@@ -61,11 +61,10 @@ const Card = ({
 
           <motion.li
             initial={{
-              translateY: 100,
+              translateY: type == "portrait" ? 10 : 100,
             }}
             animate={{
-              translateY: Hover ? 0 : 100,
-
+              translateY: Hover ? (type == "portrait" ? 0 : 10) : 100,
               transition: {
                 duration: 0.1,
                 delay: 0.15,
@@ -76,10 +75,10 @@ const Card = ({
           </motion.li>
           <motion.li
             initial={{
-              translateY: 100,
+              translateY: type == "portrait" ? 100 : 10,
             }}
             animate={{
-              translateY: Hover ? 0 : 100,
+              translateY: Hover ? (type == "portrait" ? 0 : 10) : 100,
               transition: {
                 duration: 0.1,
                 delay: 0.2,
@@ -90,17 +89,16 @@ const Card = ({
           </motion.li>
         </ul>
         <div className="info">
-          <p className="title">Lorem, ipsum.</p>
+          <p className="title">Lorem, ipsum. Lorem ipsum</p>
           <span className="rating">
-            {/* {getStar(rating).map((value) => (
+            {getStar(rating).map((value) => (
               <>
-            
                 <Star />
                 <HalfStar />
               </>
-            ))} */}
+            ))}
           </span>
-          <h4>100 Rs</h4>
+          <h4>Rs 100 </h4>
         </div>
       </div>
     </>

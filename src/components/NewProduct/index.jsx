@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
-import { i1 } from "../../../asset";
+
+import { i1, i2, i3, i4, i5, i6, i7, i8 } from "../../../asset";
 import { Card } from "../";
 import "./style.scss";
 
@@ -65,6 +66,13 @@ const NewProduct = () => {
         </div>
         <div className="container">
           <Card src={i1} rating={3.5} />
+          <Card src={i2} rating={3.5} />
+          <Card src={i3} rating={3.5} />
+          <Card src={i4} rating={3.5} />
+          <Card src={i5} rating={3.5} />
+          <Card src={i6} rating={3.5} />
+          <Card src={i7} rating={3.5} />
+          <Card src={i8} rating={3.5} />
         </div>
       </div>
     </>

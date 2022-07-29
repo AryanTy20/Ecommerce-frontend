@@ -1,0 +1,24 @@
+.whyus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3em 4.5em;
+
+  .card {
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 3.5rem;
+      color: var(--red);
+      margin-right: 0.5em;
+    }
+
+    .meta {
+      p {
+        font-size: 1.4rem;
+        color: rgba(black, 0.5);
+      }
+    }
+  }
+}

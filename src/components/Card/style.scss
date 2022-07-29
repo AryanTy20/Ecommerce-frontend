@@ -4,8 +4,8 @@
   position: relative;
   border: solid green 1px;
   text-align: center;
-  //   height: 15em;
-  //   width: 12em;
+  // height: 18em;
+  width: 16em;
 
   .poster {
     position: relative;
@@ -45,9 +45,8 @@
     position: absolute;
     top: 64%;
     display: flex;
-    // align-items: center;
     justify-content: center;
-    height: 5em;
+    height: 4em;
     width: 100%;
     overflow: hidden;
 
@@ -80,12 +79,14 @@
   }
 
   .info {
+    font-size: 1.4rem;
     h4 {
       margin: 0.5em 0;
     }
 
     .rating {
       svg {
+        font-size: 1rem;
         color: var(--yellow);
       }
     }
@@ -96,7 +97,6 @@
   margin: 2em 0;
   width: 20em;
   position: relative;
-  border: solid green 1px;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
@@ -127,12 +127,11 @@
     li {
       padding: 0.5em;
       background-color: white;
-      margin: 0 0.5em;
+      margin: -0.2em 0.5em;
       border-radius: 50%;
       height: 2em;
       width: 2em;
       display: flex;
-      align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: all var(--transition-time);
@@ -158,15 +157,16 @@
     flex: 1;
 
     .title {
-      font-weight: lighter;
+      font-size: 1.2rem;
     }
 
     h4 {
-      margin: 0.5em 0;
+      font-size: 1.3rem;
     }
 
     .rating {
       svg {
+        font-size: 1rem;
         color: var(--yellow);
       }
     }
