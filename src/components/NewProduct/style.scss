@@ -24,7 +24,7 @@
       flex: 1;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
       span {
         font-size: 1.5rem;
         cursor: pointer;
@@ -51,11 +51,38 @@
   }
 
   .container {
+    margin: 2em 0;
     border: solid red 1px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: -1em;
+  }
+}
+
+@media screen and(min-width:700px) and (max-width: 1024px) {
+  .newProduct {
+    margin: 2em;
+    .header {
+      h2 {
+        flex: 0.5;
+        font-size: 1.8rem;
+
+        &::after {
+          width: 20%;
+        }
+      }
+      .category {
+        span {
+          font-size: 1.4rem !important;
+        }
+      }
+    }
+
+    .container {
+      display: grid;
+      grid-template: auto / repeat(auto-fit, minmax(14em, 1fr));
+      gap: 1em;
+    }
   }
 }

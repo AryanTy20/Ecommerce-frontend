@@ -65,14 +65,14 @@ const NewProduct = () => {
           </div>
         </div>
         <div className="container">
-          <Card src={i1} rating={3.5} />
-          <Card src={i2} rating={3.5} />
-          <Card src={i3} rating={3.5} />
-          <Card src={i4} rating={3.5} />
-          <Card src={i5} rating={3.5} />
-          <Card src={i6} rating={3.5} />
-          <Card src={i7} rating={3.5} />
-          <Card src={i8} rating={3.5} />
+          <Card src={i1} rating={3.5} key={1} />
+          <Card src={i2} rating={3.5} key={2} />
+          <Card src={i3} rating={3.5} key={3} />
+          <Card src={i4} rating={3.5} key={4} />
+          <Card src={i5} rating={3.5} key={5} />
+          <Card src={i6} rating={3.5} key={6} />
+          <Card src={i7} rating={3.5} key={7} />
+          <Card src={i8} rating={3.5} key={8} />
         </div>
       </div>
     </>

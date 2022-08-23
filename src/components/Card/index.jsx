@@ -91,11 +91,11 @@ const Card = ({
         <div className="info">
           <p className="title">Lorem, ipsum. Lorem ipsum</p>
           <span className="rating">
-            {getStar(rating).map((value) => (
-              <>
+            {getStar(rating).map((value, i) => (
+              <div key={i}>
                 <Star />
                 <HalfStar />
-              </>
+              </div>
             ))}
           </span>
           <h4>Rs 100 </h4>

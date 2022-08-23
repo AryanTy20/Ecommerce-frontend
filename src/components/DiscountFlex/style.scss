@@ -1,23 +1,13 @@
 .discountflex {
   margin: 8rem;
-  border: solid green 1px;
 
   display: flex;
   align-items: center;
   background-color: #f4f4f4;
 
-  // .poster {
-  //   img {
-  //     height: 100%;
-  //     width: 100%;
-  //     object-fit: cover;
-  //   }
-  // }
-
   .meta {
     height: 100%;
     width: 100%;
-    border: solid red 1px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,11 +28,11 @@
       &::after {
         position: absolute;
         content: "";
-        top: -50%;
+        top: -40%;
         left: 18%;
         z-index: -1;
         height: 80%;
-        width: 65%;
+        width: 62%;
         background-color: white;
         border-radius: 50%;
         padding: 3em 0em;
@@ -56,6 +46,25 @@
 
     .time {
       margin: 1em 0;
+
+      text-align: center;
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .timer {
+          margin: 0 0.5em;
+          display: flex;
+          align-items: center;
+          width: 4em;
+
+          h2 {
+            flex: 1;
+          }
+        }
+      }
     }
 
     button {

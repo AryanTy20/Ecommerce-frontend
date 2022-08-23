@@ -15,3 +15,4 @@ export { default as Search } from "./Search";
 export { default as Testimonial } from "./Testimonial";
 export { default as Whishlist } from "./Whishlist";
 export { default as WhyUs } from "./WhyUS";
+export { default as Trending } from "./Trending";

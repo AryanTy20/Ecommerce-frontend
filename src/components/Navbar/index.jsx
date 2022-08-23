@@ -30,9 +30,15 @@ const Navbar = () => {
             <span> Register</span>
           </div>
           <div className="other">
-            <Search className="icon" />
-            <Heart className="icon" />
-            <Cart className="icon" />
+            <div className="icon">
+              <Search />
+            </div>
+            <div className="icon number" data-number="5">
+              <Heart />
+            </div>
+            <div className="icon number" data-number="99">
+              <Cart />
+            </div>
           </div>
         </div>
 

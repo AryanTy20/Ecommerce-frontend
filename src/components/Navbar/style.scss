@@ -5,7 +5,8 @@
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 
   .logo {
-    flex: 0.6;
+    flex: 1;
+
     font-family: "fancyfont";
     font-size: 4rem;
     line-height: 1.5em;
@@ -13,12 +14,13 @@
   }
 
   .menu {
-    flex: 1.8;
+    flex: 2.5;
+
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-weight: 400;
-    margin: 0 8em;
+    margin: 0 5em;
 
     a {
       position: relative;
@@ -46,9 +48,9 @@
     }
   }
   .right {
-    flex: 0.8;
+    flex: 1;
+    margin-right: -3em;
     display: flex;
-    align-items: center;
 
     .auth {
       flex: 1;
@@ -71,11 +73,38 @@
       flex: 1;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-around;
+
+      .number {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: attr(data-number);
+          top: -1em;
+          right: -1.8em;
+          height: 1em;
+          width: 1em;
+          font-size: 1rem;
+          padding: 0.4em;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: black;
+        }
+      }
 
       .icon {
-        font-size: 1.8rem;
-        cursor: pointer;
+        //
+        display: flex;
+        align-items: center;
+
+        svg {
+          font-size: 1.8rem;
+          cursor: pointer;
+        }
 
         &:first-of-type {
           transform: rotateZ(90deg);
@@ -85,17 +114,27 @@
   }
   .ham {
     visibility: hidden;
-    border: solid black 1px;
-    padding: 1em 0.5em;
     display: flex;
+    padding: 1em 0.5em;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      left: 12%;
+      height: 100%;
+      width: 70%;
+      border: solid black 1px;
+    }
 
     span {
-      padding: 0.15em;
-      width: 2em;
+      padding: 0.1em 0;
+      width: 1.4em;
       background-color: black;
       position: relative;
 
@@ -110,10 +149,10 @@
       }
 
       &::after {
-        top: 0.6em;
+        top: 0.4em;
       }
       &:before {
-        bottom: 0.6em;
+        bottom: 0.4em;
       }
     }
   }
@@ -121,12 +160,10 @@
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
   .Navbar {
-    border: solid red 5px;
-
+    padding: 0.5em 1em;
     .logo {
       flex: 1;
-      // min-width: 3em !important;
-      border: Solid green 1px;
+      min-width: 3em !important;
     }
 
     .ham {

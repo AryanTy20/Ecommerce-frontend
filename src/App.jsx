@@ -6,6 +6,7 @@ import {
   Checkout,
   Collection,
   DiscountFlex,
+  Trending,
   Profile,
   WhyUs,
   Footer,
@@ -19,6 +20,7 @@ function App() {
       <Jumbotron />
       <NewProduct />
       <Collection />
+      <Trending />
       <DiscountFlex />
       <WhyUs />
       <Footer />

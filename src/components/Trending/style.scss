@@ -1,0 +1,27 @@
+.trending {
+  margin: 2em 5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .box {
+    flex: 1;
+    min-height: 30em;
+
+    h3 {
+      position: relative;
+      text-transform: uppercase;
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 15%;
+        background-color: var(--accent);
+      }
+    }
+  }
+}

@@ -27,3 +27,14 @@ export { default as C5 } from "./img/c5.webp";
 //slider
 export { default as collection } from "./img/collection.webp";
 export { default as discount } from "./img/discount.webp";
+
+//Trending
+export { default as P1 } from "./img/p1.webp";
+export { default as P2 } from "./img/p2.webp";
+export { default as P3 } from "./img/p3.webp";
+export { default as T1 } from "./img/t1.webp";
+export { default as T2 } from "./img/t2.webp";
+export { default as T3 } from "./img/t3.webp";
+export { default as BS1 } from "./img/bs1.webp";
+export { default as BS2 } from "./img/bs2.webp";
+export { default as BS3 } from "./img/bs3.webp";
