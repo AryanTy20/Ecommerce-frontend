@@ -16,7 +16,6 @@
     gap: var(--gap);
     .card {
       position: relative;
-
       img {
         height: 100%;
         width: 100%;
@@ -71,6 +70,25 @@
             font-family: "fancyfont";
             font-size: 5rem;
             font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:699px) {
+  .jumbotrone {
+    .container {
+      display: flex;
+      flex-direction: column;
+
+      .card {
+        &:first-child {
+          height: 22em;
+          .meta {
+            width: 80%;
+            margin: 0 10em 0 5%;
           }
         }
       }

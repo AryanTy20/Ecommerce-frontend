@@ -113,3 +113,16 @@
 .createdby {
   text-align: center;
 }
+
+@media screen and (min-width: 600px) and(max-width:1024px) {
+  .footer {
+    justify-content: space-between;
+    padding: 2em;
+
+    .newsLetter {
+      .inputBox {
+        min-width: 20em;
+      }
+    }
+  }
+}

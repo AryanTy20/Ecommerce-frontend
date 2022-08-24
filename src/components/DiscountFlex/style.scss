@@ -1,6 +1,5 @@
 .discountflex {
   margin: 8rem;
-
   display: flex;
   align-items: center;
   background-color: #f4f4f4;
@@ -75,6 +74,26 @@
       font-size: 1.8rem;
       font-weight: 400;
       border-bottom: solid var(--accent) 2px;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) and(max-width:1023px) {
+  .discountflex {
+    flex-direction: column;
+    margin: 5em 2em;
+
+    .poster {
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .meta {
+      margin: 3em;
     }
   }
 }

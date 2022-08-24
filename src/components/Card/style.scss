@@ -2,7 +2,6 @@
   margin: 0.8em 0;
   width: fit-content;
   position: relative;
-
   text-align: center;
   // height: 18em;
   width: 16em;
@@ -180,5 +179,13 @@
 @media screen and(min-width:700px) and(max-width:1024px) {
   .portrait {
     width: 100%;
+  }
+  .landscape {
+    width: 14em;
+
+    .poster {
+      height: 6em;
+      width: 6em;
+    }
   }
 }

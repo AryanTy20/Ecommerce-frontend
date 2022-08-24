@@ -86,3 +86,17 @@
     }
   }
 }
+
+@media screen and (max-width: 699px) {
+  .collection {
+    padding: 0;
+    .slider {
+      width: 100% !important;
+      border: solid green 1px;
+
+      .slideshow {
+        border: solid red 1px;
+      }
+    }
+  }
+}
