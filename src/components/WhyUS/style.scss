@@ -40,5 +40,10 @@
 @media screen and (max-width: 690px) {
   .whyus {
     margin: 2em;
+    .card {
+      width: 100%;
+      height: fit-content;
+      margin: 1em 0;
+    }
   }
 }

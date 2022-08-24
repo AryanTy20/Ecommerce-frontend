@@ -24,6 +24,12 @@
   }
 }
 
+@media screen and(max-width:699px) {
+  .trending {
+    flex-direction: column;
+  }
+}
+
 @media screen and (min-width: 600px) and (max-width: 1023px) {
   .trending {
     margin: 2em;

@@ -112,6 +112,34 @@
 
 .createdby {
   text-align: center;
+  margin: 2em;
+
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    top: -1em;
+    height: 0.1em;
+    width: 98%;
+    margin-inline: auto;
+    background-color: rgba(rgb(56, 55, 55), 0.5);
+  }
+}
+
+@media screen and(max-width:699px) {
+  .footer {
+    justify-content: space-between;
+    padding: 2em;
+    .main,
+    .newsLetter {
+      width: 100%;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 600px) and(max-width:1024px) {

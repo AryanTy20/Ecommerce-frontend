@@ -127,8 +127,9 @@
       content: "";
       inset: 0;
       left: 12%;
-      height: 100%;
-      width: 70%;
+      top: 8%;
+      height: 80%;
+      width: 72%;
       border: solid black 1px;
     }
 
@@ -158,22 +159,25 @@
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1023px) {
+@media screen and (max-width: 699px) {
+}
+
+@media screen and (max-width: 1023px) {
   .Navbar {
     padding: 0.5em 1em;
+    justify-content: space-between;
     .logo {
-      flex: 1;
       min-width: 3em !important;
     }
 
     .ham {
       visibility: visible;
-      flex: 1;
     }
 
     .menu,
     .right {
       visibility: hidden;
+      display: none;
     }
   }
 }
